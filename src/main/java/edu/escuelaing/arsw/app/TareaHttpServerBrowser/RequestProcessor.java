@@ -44,6 +44,8 @@ public class RequestProcessor implements Runnable {
                     fileReader.js("/src/main/resources/" + path, clientSocket.getOutputStream());
                 } else if (path.contains(".css")) {
                     fileReader.css("/src/main/resources/" + path, clientSocket.getOutputStream());
+                } else if (path.equals("")){
+                    fileReader.html("/src/main/resources/index.html", clientSocket.getOutputStream());
                 }
 
             }
