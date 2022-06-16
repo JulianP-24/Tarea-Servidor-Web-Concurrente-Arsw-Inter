@@ -1,1 +1,1 @@
-web: java -cp .target/classes edu.escuelaing.app.httpServerBrowser
+web: java -cp .target/classes edu.escuelaing.app.TareaHttpServerBrowser.httpServerBrowser
