@@ -1,1 +1,1 @@
-web: java -cp .target/classes edu.escuelaing.arsw.app.TareaHttpServerBrowser.httpServerBrowser
+web: java -cp target/classes;target/dependency/* edu.escuelaing.arsw.app.TareaHttpServerBrowser.httpServerBrowser
