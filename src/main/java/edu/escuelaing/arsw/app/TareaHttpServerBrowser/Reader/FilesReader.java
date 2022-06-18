@@ -97,4 +97,31 @@ public class FilesReader {
         } catch (IOException e) {
         }
     }
+
+    public void PageNotFound(String element, OutputStream outputStream) throws IOException {
+        String cont = "";
+        try {
+            BufferedReader read = new BufferedReader(new FileReader(System.getProperty("user.dir") + element));
+            
+            String line;
+            while ((line = read.readLine()) != null) {
+                cont = cont + line;
+            }
+            
+        } catch (IOException e) {
+            outputStream.write(("HTTP/1.1 404 OK\r\n"
+                    + "Content-Type: text/html\r\n"
+                    + "\r\n"
+                    + "<!DOCTYPE html>"
+                    + "<html>"
+                    + "<head>"
+                    + "<meta charset=\"UTF-8\">"
+                    + "<title>Title of the document</title>\n" + "</head>"
+                    + "<body>"
+                    + "No se encontro el recurso"
+                    + "</body>"
+                    + "</html>"
+                    + cont).getBytes());
+        }
+    }
 }

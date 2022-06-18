@@ -13,11 +13,11 @@ public class RequestProcessor implements Runnable {
     private final Socket clientSocket;
     public static FilesReader fileReader = new FilesReader();
 
-    public RequestProcessor(Socket clientSocket){
+    public RequestProcessor(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
 
-    public void run(){
+    public void run() {
         try {
             process();
         } catch (IOException e) {
@@ -29,7 +29,7 @@ public class RequestProcessor implements Runnable {
         System.out.println("Hello" + Thread.currentThread());
         PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
         BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-        String inputLine;
+        String inputLine, outputLine;
         String path = "";
         while ((inputLine = in.readLine()) != null) {
             if (inputLine.contains("GET")) {
@@ -44,21 +44,20 @@ public class RequestProcessor implements Runnable {
                     fileReader.js("/src/main/resources/" + path, clientSocket.getOutputStream());
                 } else if (path.contains(".css")) {
                     fileReader.css("/src/main/resources/" + path, clientSocket.getOutputStream());
-                } else if (path.equals("")){
+                } else if (path.equals("")) {
                     fileReader.html("/src/main/resources/index.html", clientSocket.getOutputStream());
                 }
 
-            }
+               
             System.out.println("Received: " + inputLine);
             if (!in.ready()) {
                 break;
             }
-
-
         }
 
-        out.close();
-        in.close();
-        clientSocket.close();
+            out.close();
+            in.close();
+            clientSocket.close();
+        }
     }
 }
