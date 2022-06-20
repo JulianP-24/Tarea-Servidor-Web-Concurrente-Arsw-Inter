@@ -18,7 +18,7 @@ public class httpServerBrowser {
         try {
             serverSocket = new ServerSocket(getPort());
         } catch (IOException e) {
-            System.err.println("Could not listen on port: 35001.");
+            System.err.println("Could not listen on port: 4567.");
             System.exit(1);
         }
         boolean running = true;

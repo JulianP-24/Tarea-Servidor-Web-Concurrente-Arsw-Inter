@@ -60,7 +60,7 @@ public class FilesReader {
             while ((line = read.readLine()) != null) {
                 cont = cont + line;
             }
-            outputStream.write(("HTTP/1.1 404 Not Found \r\n"
+            outputStream.write(("HTTP/1.1 200 OK \r\n"
                     + "Content-Type: text/html; charset=\"utf-8\" \r\n"
                     + "\r\n"
                     + cont).getBytes());
@@ -95,7 +95,7 @@ public class FilesReader {
             while ((line = read.readLine()) != null) {
                 cont = cont + line;
             }
-            outputStream.write(("HTTP/1.1 404 Not Found \r\n"
+            outputStream.write(("HTTP/1.1 200 OK \r\n"
                     + "Content-Type: text/javascript; charset=\"utf-8\" \r\n"
                     + "\r\n"
                     + cont).getBytes());
@@ -130,7 +130,7 @@ public class FilesReader {
             while ((line = read.readLine()) != null) {
                 cont = cont + line;
             }
-            outputStream.write(("HTTP/1.1 404 Not Found \r\n"
+            outputStream.write(("HTTP/1.1 200 OK \r\n"
                     + "Content-Type: text/css; charset=\"utf-8\" \r\n"
                     + "\r\n"
                     + cont).getBytes());
