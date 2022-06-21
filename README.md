@@ -1,7 +1,7 @@
 # Tarea ARSW Inter (HttpServer Concurrente que lee imagenes, js, css y html)
 
 ## Autor
-** Julian Adolfo Peña Marin **
+**Julian Adolfo Peña Marin**
 
 ## Descripcion
 La aplicacion es una version del servidor http realizado anteriormente pero esta vez se hizo que fuera un servisor concurrente, que devuelve archivos con extensiones css que son archivos de estilo, extensiones "js" que son archivos javascript, extensiones "html" que muestra como tal una pagina web y una imagen.
