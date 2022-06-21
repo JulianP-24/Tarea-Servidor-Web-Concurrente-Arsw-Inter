@@ -39,7 +39,7 @@ Otra forma para correrlo, ya generado el JAR, es con el siguiente comando
     java -cp "target/TareaServidorWebConcurrente-1.0-SNAPSHOT.jar" edu.escuelaing.arsw.app.TareaHttpServerBrowser.httpServerBrowser
 ```
 
-## Funcionamiento de la aplicacion
+## Funcionamiento de la aplicacion localmente
 Para verificar el funcionamiento, lo que se hace es poner a correr el programa con cualquiera de los comandos mencionados anteriormente. Una vez este corriendo podremos acceder a la ruta con los archivos que queremos que devuelva. La ruta es la siguiente
 
 ```
@@ -86,9 +86,34 @@ Como resultado se obtiene la pagina html, donde se carga el javaScript como se m
 
 ![](img/img4.png)
 
-## Linl Heroku
+## Link Heroku
 
 Link: https://cryptic-castle-98984.herokuapp.com/
+
+## Funcionamiento de la Aplicacion en Heroku
+
+Para verificar el funcionamiento de la aplicacion en Heroku, solo se accede al link de heroku, mostrado anteriormente, como se muestra a continuacion:
+
+Para devolver el html, en el siguiente link
+
+```
+    https://cryptic-castle-98984.herokuapp.com/
+```
+
+Como resultado se obtiene
+
+![](img/herokuHtml.png)
+
+Para devolver el js, en el siguiente link
+
+```
+    https://cryptic-castle-98984.herokuapp.com/index.js
+```
+Como resultado se obtiene
+
+![](img/herokuJs.png)
+
+y asi para los demas archivos, solo se le cambia al final el archivo que se queira devolver.
 
 ## Diagrama de Clases
 A continuacion se presenta el diagrama de clases de la arquitectura para la tarea propuesta
