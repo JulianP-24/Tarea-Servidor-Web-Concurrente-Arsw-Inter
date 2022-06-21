@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 * Clase de la implementacion del HttpServer
 */
 public class httpServerBrowser {
-
+    
     public static void main(String[] args) throws IOException {
         ExecutorService poolDeHilos = Executors.newFixedThreadPool(10);
         ServerSocket serverSocket = null;
@@ -33,16 +33,14 @@ public class httpServerBrowser {
             }
 
             RequestProcessor requestProcessor = new RequestProcessor(clientSocket);
-
             poolDeHilos.execute(requestProcessor);
-
             //new Thread(requestProcessor).start();
-
 
         }
         serverSocket.close();
     }
 
+    
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
@@ -50,4 +48,6 @@ public class httpServerBrowser {
         return 4567;
 
     }
+
+
 }
