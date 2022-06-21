@@ -1,10 +1,12 @@
-# Tarea ARSW Inter (HttpServer que lee imagenes, js, css y html)
+# Tarea ARSW Inter (HttpServer Concurrente que lee imagenes, js, css y html)
 
 ## Autor
 Julian Adolfo Peña Marin
 
 ## Descripcion
-La aplicacion es un servidor http, que devuelve archivos con extensiones css que son archivos de estilo, extensiones "js" que son archivos javascript, extensiones "html" que muestra como tal una pagina web y una imagen.
+La aplicacion es una version del servidor http realizado anteriormente pero esta vez se hizo que fuera un servisor concurrente, que devuelve archivos con extensiones css que son archivos de estilo, extensiones "js" que son archivos javascript, extensiones "html" que muestra como tal una pagina web y una imagen.
+
+Adicionalmente la aplicacion esta desplegada en Heroku, para esto se creo un archivo llamado Procfile, para que heroku entendiera que era una aplicacion web.
 
 ## Documentacion
 Para obtener la documentacion del proyecto, con el siguiente comando se puede generar:
@@ -17,7 +19,7 @@ Para obtener la documentacion del proyecto, con el siguiente comando se puede ge
 Primero se debe clonar el repositorio, para esto puede utilizar el siguiente comando de git, con la url del repositorio que se quiere clonar, como se muestra a continuación
 
 ```
-    git clone https://github.com/JulianP-24/Lab-Networkin-Arsw-Inter.git
+    git clone https://github.com/JulianP-24/Tarea-Servidor-Web-Concurrente-Arsw-Inter.git
 ```
 
 Una vez clonado para generar el JAR, debe poner el siguiente comando
@@ -34,14 +36,14 @@ Despues puede correrlo con el siguiente comando, ubicandose en la carpeta raiz
 Otra forma para correrlo, ya generado el JAR, es con el siguiente comando
 
 ```
-    java -cp "target/LabNetworkinArswInter-1.0-SNAPSHOT.jar" edu.escuelaing.arsw.app.TareaHttpServerBrowser.httpServerBrowser
+    java -cp "target/TareaServidorWebConcurrente-1.0-SNAPSHOT.jar" edu.escuelaing.arsw.app.TareaHttpServerBrowser.httpServerBrowser
 ```
 
 ## Funcionamiento de la aplicacion
 Para verificar el funcionamiento, lo que se hace es poner a correr el programa con cualquiera de los comandos mencionados anteriormente. Una vez este corriendo podremos acceder a la ruta con los archivos que queremos que devuelva. La ruta es la siguiente
 
 ```
-    http://localhost:35001/"Archivo que se quiere buscar"
+    http://localhost:4567/"Archivo que se quiere buscar"
 ```
 Donde 
  * 35001 es el puerto por el que corre la aplicacion
@@ -49,7 +51,7 @@ Donde
 Para devolver una imagen, se ingresa a la siguiente ruta
 
 ```
-    http://localhost:35001/valorant.jpg
+    http://localhost:4567/valorant.jpg
 ```
 Como resultado se obtiene la imagen:
 
@@ -58,7 +60,7 @@ Como resultado se obtiene la imagen:
 Para devolver una archivo js, se ingresa a la siguiente ruta
 
 ```
-    http://localhost:35001/index.js
+    http://localhost:4567/index.js
 ```
 Como resultado se obtiene la imagen:
 
@@ -67,7 +69,7 @@ Como resultado se obtiene la imagen:
 Para devolver una archivo css, se ingresa a la siguiente ruta
 
 ```
-    http://localhost:35001/style.js
+    http://localhost:4567/style.js
 ```
 Como resultado se obtiene la imagen:
 
@@ -76,11 +78,17 @@ Como resultado se obtiene la imagen:
 Para devolver una archivo html, se ingresa a la siguiente ruta
 
 ```
-    http://localhost:35001/index.html
+    http://localhost:4567/index.html
 ```
-Como resultado se obtiene la imagen:
+Como resultado se obtiene la pagina html, donde se carga el javaScript como se muestra en la siguiente imagen:
+
+![](img/imgHtmlJs.png)
 
 ![](img/img4.png)
+
+## Linl Heroku
+
+Link: https://cryptic-castle-98984.herokuapp.com/
 
 ## Diagrama de Clases
 A continuacion se presenta el diagrama de clases de la arquitectura para la tarea propuesta
