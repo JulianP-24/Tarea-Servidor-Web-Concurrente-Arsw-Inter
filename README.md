@@ -39,55 +39,6 @@ Otra forma para correrlo, ya generado el JAR, es con el siguiente comando
     java -cp "target/TareaServidorWebConcurrente-1.0-SNAPSHOT.jar" edu.escuelaing.arsw.app.TareaHttpServerBrowser.httpServerBrowser
 ```
 
-## Funcionamiento de la aplicacion localmente
-Para verificar el funcionamiento localmente, lo que se hace es poner a correr el programa con cualquiera de los comandos mencionados anteriormente. Una vez este corriendo podremos acceder a la ruta con los archivos que queremos que devuelva. La ruta es la siguiente
-
-```
-    http://localhost:4567/"Archivo que se quiere buscar"
-```
-Donde 
- * 4567 es el puerto por el que corre la aplicacion
-
-Para devolver una imagen, se ingresa a la siguiente ruta
-
-```
-    http://localhost:4567/valorant.jpg
-```
-Como resultado se obtiene la imagen:
-
-![](img/img1.png)
-
-Para devolver una archivo js, se ingresa a la siguiente ruta
-
-```
-    http://localhost:4567/index.js
-```
-Como resultado se obtiene la imagen:
-
-![](img/img2.png)
-
-Para devolver una archivo css, se ingresa a la siguiente ruta
-
-```
-    http://localhost:4567/style.js
-```
-Como resultado se obtiene la imagen:
-
-![](img/img3.png)
-
-Para devolver una archivo html, se ingresa a la siguiente ruta
-
-```
-    http://localhost:4567/index.html
-```
-Como resultado se obtiene la pagina html, donde se carga el javaScript como se muestra en la siguiente imagen:
-
-![](img/imgHtmlJs.png)
-
-Y despues muestra la pagina con el css aplicado
-
-![](img/img4.png)
-
 ## Link Heroku
 
 Link: https://cryptic-castle-98984.herokuapp.com/
@@ -115,7 +66,25 @@ Como resultado se obtiene
 
 ![](img/herokuJs.png)
 
-y asi para los demas archivos, solo se le cambia al final el archivo que se queira devolver.
+Para devolver el css, en el siguiente link
+
+```
+    https://cryptic-castle-98984.herokuapp.com/style.css
+```
+Como resultado se obtiene
+
+![](img/img3.png)
+
+Para devolver la imagen, en el siguiente link
+
+```
+    https://cryptic-castle-98984.herokuapp.com/valorant.png
+```
+Como resultado se obtiene
+
+![](img/img1.png)
+
+
 
 ## Diagrama de Clases
 A continuacion se presenta el diagrama de clases de la arquitectura para la tarea propuesta
