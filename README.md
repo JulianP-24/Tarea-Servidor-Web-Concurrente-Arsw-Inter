@@ -84,6 +84,8 @@ Como resultado se obtiene la pagina html, donde se carga el javaScript como se m
 
 ![](img/imgHtmlJs.png)
 
+Y despues muestra la pagina con el css aplicado
+
 ![](img/img4.png)
 
 ## Link Heroku
