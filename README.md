@@ -40,13 +40,13 @@ Otra forma para correrlo, ya generado el JAR, es con el siguiente comando
 ```
 
 ## Funcionamiento de la aplicacion localmente
-Para verificar el funcionamiento, lo que se hace es poner a correr el programa con cualquiera de los comandos mencionados anteriormente. Una vez este corriendo podremos acceder a la ruta con los archivos que queremos que devuelva. La ruta es la siguiente
+Para verificar el funcionamiento localmente, lo que se hace es poner a correr el programa con cualquiera de los comandos mencionados anteriormente. Una vez este corriendo podremos acceder a la ruta con los archivos que queremos que devuelva. La ruta es la siguiente
 
 ```
     http://localhost:4567/"Archivo que se quiere buscar"
 ```
 Donde 
- * 35001 es el puerto por el que corre la aplicacion
+ * 4567 es el puerto por el que corre la aplicacion
 
 Para devolver una imagen, se ingresa a la siguiente ruta
 
