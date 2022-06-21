@@ -1,7 +1,7 @@
 # Tarea ARSW Inter (HttpServer Concurrente que lee imagenes, js, css y html)
 
 ## Autor
-Julian Adolfo Peña Marin
+** Julian Adolfo Peña Marin **
 
 ## Descripcion
 La aplicacion es una version del servidor http realizado anteriormente pero esta vez se hizo que fuera un servisor concurrente, que devuelve archivos con extensiones css que son archivos de estilo, extensiones "js" que son archivos javascript, extensiones "html" que muestra como tal una pagina web y una imagen.
@@ -53,7 +53,11 @@ Para devolver el html, en el siguiente link
     https://cryptic-castle-98984.herokuapp.com/
 ```
 
-Como resultado se obtiene
+Como resultado se obtiene, el mensaje de javascript que es una alerta como se muestra en la siguiente imagen
+
+![](img/imgHtmlJs.png)
+
+Y despues muestra la pagina html con el css aplicado, como se ve en la siguiente imagen
 
 ![](img/herokuHtml.png)
 
@@ -91,4 +95,14 @@ A continuacion se presenta el diagrama de clases de la arquitectura para la tare
 
 ![](img/diagramaClases.png)
 
-Como se puede observar la arquitectura se encuentra dentro de tres paquetes, el primero de ellos es el paquete con nombre app, el cual es el principal y en donde estan contenidos los otros dos, el segundo paquete es el que tiene como nombre TareaHttpServerBrowser, el cual tiene la clase principal y otro paquete de nombre Reader. En la clase principal se tiene el metodo main , que es donde esta la implementacion del servidor y en donde verifica la extension del archivo que le llega al path, una vez verificado llama a uno de los metodos de la clase que esta en el paquete Reader para obtener el resultado correcto.
+Como se puede observar la arquitectura se encuentra dentro de tres paquetes, el primero de ellos es el paquete con nombre app, el cual es el principal y en donde estan contenidos los otros dos, el segundo paquete es el que tiene como nombre TareaHttpServerBrowser, el cual tiene la clase principal y otra clase de nombre RequestProcessor que implementa Runnable y trabaja como un hilo atendiendo las conexiones y otro paquete de nombre Reader. En la clase principal se tiene el metodo main , que es donde esta la implementacion del servidor y en donde instancia la clase RequestProcesor, quien es la que se encarga de verificar el tipo de archivo que llega en el path, para despues llamar a uno de los metodos de la clase que esta en el paquete Reader para obtener el resultado correcto.
+
+## Built con
+
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [JAVA JDK 8](http://www.oracle.com/technetwork/java/javase/overview/index.html) - construcción
+
+
+## Licencia
+
+This project is licensed under the GNU General Public License - see the [LICENSE](LICENSE) file for details
